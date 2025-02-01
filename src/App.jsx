@@ -1,11 +1,11 @@
 import { lazy, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "./components/Layout/Layout.jsx";
+import { PrivateRoute } from "./components/PrivateRoute.jsx";
+import { RestrictedRoute } from "./components/RestrictedRoute";
 import { useDispatch, useSelector } from "react-redux";
-import { refreshUser } from "./redux/auth/operations.js";
-import { selectIsRefreshing } from "./redux/auth/selectors.js";
-import Layout from "./components/Layout/Layout.jsx";
-import PrivateRoute from "./components/PrivateRoute.jsx";
-import RestrictedRoute from "./components/RestrictedRoute.jsx";
+import { selectIsRefreshing } from "./redux/auth/selectors";
+import { refreshUser } from "./redux/auth/operations";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));

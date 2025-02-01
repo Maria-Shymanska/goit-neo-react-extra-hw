@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import css from "./AuthNav.module.css";
 
-const AuthNav = () => {
+export const AuthNav = () => {
   const getActiveClass = ({ isActive }) => {
     return isActive ? css.active : "link";
   };
@@ -17,5 +17,3 @@ const AuthNav = () => {
     </div>
   );
 };
-
-export default AuthNav;

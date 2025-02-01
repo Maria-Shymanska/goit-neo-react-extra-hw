@@ -1,9 +1,9 @@
+import css from "./RegistrationForm.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useId } from "react";
 import * as Yup from "yup";
-import css from "./RegistrationForm.module.css";
 
-const RegistrationForm = ({ submit }) => {
+export const RegistrationForm = ({ submit }) => {
   const validateSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, "Too Short!")
@@ -59,5 +59,3 @@ const RegistrationForm = ({ submit }) => {
     </Formik>
   );
 };
-
-export default RegistrationForm;
